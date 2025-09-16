@@ -15,6 +15,8 @@
 		9CB624302E79F3C10052C148 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB6242F2E79F3C10052C148 /* RxRelay */; };
 		9CB624322E79F3C10052C148 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB624312E79F3C10052C148 /* RxSwift */; };
 		9CB624352E79F5300052C148 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB624342E79F5300052C148 /* MainView.swift */; };
+		9CB624382E79FF000052C148 /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB624372E79FF000052C148 /* ObservableViewController.swift */; };
+		9CB6243A2E79FF0C0052C148 /* ObservableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB624392E79FF0C0052C148 /* ObservableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9CB624222E79F31D0052C148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CB624252E79F31D0052C148 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9CB624342E79F5300052C148 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9CB624372E79FF000052C148 /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
+		9CB624392E79FF0C0052C148 /* ObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,18 @@
 			isa = PBXGroup;
 			children = (
 				9CB624342E79F5300052C148 /* MainView.swift */,
+				9CB624362E79FEE50052C148 /* Observable */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		9CB624362E79FEE50052C148 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				9CB624372E79FF000052C148 /* ObservableViewController.swift */,
+				9CB624392E79FF0C0052C148 /* ObservableViewModel.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB6243A2E79FF0C0052C148 /* ObservableViewModel.swift in Sources */,
 				9CB624212E79F31B0052C148 /* ContentView.swift in Sources */,
+				9CB624382E79FF000052C148 /* ObservableViewController.swift in Sources */,
 				9CB624352E79F5300052C148 /* MainView.swift in Sources */,
 				9CB6241F2E79F31B0052C148 /* RXLabApp.swift in Sources */,
 			);
