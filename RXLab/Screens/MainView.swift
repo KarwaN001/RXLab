@@ -101,8 +101,8 @@ class MainViewController: UIViewController {
             button.layer.cornerRadius = 8
             button.heightAnchor.constraint(equalToConstant: 50).isActive = true
             
-            // Currently no functionality
-            // button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+            // Add target for navigation
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
             
             stackView.addArrangedSubview(button)
         }
@@ -110,7 +110,26 @@ class MainViewController: UIViewController {
     
     // Placeholder for future button action
     @objc private func buttonTapped(_ sender: UIButton) {
-        print("Button tapped: \(sender.currentTitle ?? "")")
+        guard let title = sender.currentTitle else { return }
+        
+        switch title {
+        case "Observable":
+            let observableVC = ObservableViewController()
+            if let nav = navigationController {
+                nav.pushViewController(observableVC, animated: true)
+            } else {
+                let nav = UINavigationController(rootViewController: observableVC)
+                nav.modalPresentationStyle = .fullScreen
+                present(nav, animated: true)
+            }
+            
+        // Future cases for other concepts
+        // case "Observer": ...
+        // case "Disposable": ...
+        
+        default:
+            break
+        }
     }
 }
 
