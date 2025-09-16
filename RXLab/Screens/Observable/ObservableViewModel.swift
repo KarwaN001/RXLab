@@ -20,8 +20,7 @@ class ObservableViewModel {
     func fetchItems() {
         let numbers = Observable.of("One", "Two", "Three")
         
-        numbers
-            .subscribe(onNext: { [weak self] value in
+        numbers.subscribe(onNext: { [weak self] value in
                 self?.items.onNext(value)
             })
             .disposed(by: disposeBag)
