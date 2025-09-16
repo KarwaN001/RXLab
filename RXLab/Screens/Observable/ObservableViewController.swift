@@ -65,7 +65,7 @@ class ObservableViewController: UIViewController {
         // Bind items emitted from viewModel to label
         viewModel.items
             .scan("") { previous, new in
-                previous + "\n" + new
+                previous + " " + new
             }
             .bind(to: label.rx.text)
             .disposed(by: disposeBag)
@@ -73,6 +73,8 @@ class ObservableViewController: UIViewController {
     
     @objc private func buttonTapped() {
         viewModel.fetchItems()
+        var random = Int.random(in: 1...100)
+        print("buttonTapped  TEST \(random)")
     }
 }
 
