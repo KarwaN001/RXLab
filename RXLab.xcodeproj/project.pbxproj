@@ -17,6 +17,8 @@
 		9CB624352E79F5300052C148 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB624342E79F5300052C148 /* MainView.swift */; };
 		9CB624382E79FF000052C148 /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB624372E79FF000052C148 /* ObservableViewController.swift */; };
 		9CB6243A2E79FF0C0052C148 /* ObservableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB624392E79FF0C0052C148 /* ObservableViewModel.swift */; };
+		9CB6243D2E7A11FA0052C148 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB6243C2E7A11FA0052C148 /* ObserverVC.swift */; };
+		9CB6243F2E7A120D0052C148 /* ObserverVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB6243E2E7A120D0052C148 /* ObserverVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9CB624342E79F5300052C148 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9CB624372E79FF000052C148 /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
 		9CB624392E79FF0C0052C148 /* ObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewModel.swift; sourceTree = "<group>"; };
+		9CB6243C2E7A11FA0052C148 /* ObserverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
+		9CB6243E2E7A120D0052C148 /* ObserverVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9CB624342E79F5300052C148 /* MainView.swift */,
+				9CB6243B2E7A11DA0052C148 /* Observer */,
 				9CB624362E79FEE50052C148 /* Observable */,
 			);
 			path = Screens;
@@ -96,6 +101,15 @@
 				9CB624392E79FF0C0052C148 /* ObservableViewModel.swift */,
 			);
 			path = Observable;
+			sourceTree = "<group>";
+		};
+		9CB6243B2E7A11DA0052C148 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				9CB6243C2E7A11FA0052C148 /* ObserverVC.swift */,
+				9CB6243E2E7A120D0052C148 /* ObserverVM.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB6243A2E79FF0C0052C148 /* ObservableViewModel.swift in Sources */,
+				9CB6243F2E7A120D0052C148 /* ObserverVM.swift in Sources */,
 				9CB624212E79F31B0052C148 /* ContentView.swift in Sources */,
+				9CB6243D2E7A11FA0052C148 /* ObserverVC.swift in Sources */,
 				9CB624382E79FF000052C148 /* ObservableViewController.swift in Sources */,
 				9CB624352E79F5300052C148 /* MainView.swift in Sources */,
 				9CB6241F2E79F31B0052C148 /* RXLabApp.swift in Sources */,
