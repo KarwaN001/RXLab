@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class MainViewController: UIViewController {
 
@@ -83,8 +84,7 @@ class MainViewController: UIViewController {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
+// MARK: - SwiftUI Preview
 
 struct MainViewControllerRepresentable: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> MainViewController {
@@ -102,4 +102,4 @@ struct MainViewController_Previews: PreviewProvider {
             .edgesIgnoringSafeArea(.all)
     }
 }
-#endif
+
