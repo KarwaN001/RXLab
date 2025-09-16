@@ -10,6 +10,17 @@ import SwiftUI
 
 class MainViewController: UIViewController {
 
+    // Fixed header title
+    private let headerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "RXLab"
+        label.font = .boldSystemFont(ofSize: 28)
+        label.textAlignment = .center
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     // ScrollView to handle all buttons if they exceed screen height
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
@@ -25,11 +36,20 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "RxLab Main"
         
+        setupHeader()
         setupScrollView()
         setupStackView()
         setupButtons()
+    }
+    
+    private func setupHeader() {
+        view.addSubview(headerLabel)
+        NSLayoutConstraint.activate([
+            headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            headerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            headerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
     }
     
     private func setupScrollView() {
@@ -37,7 +57,7 @@ class MainViewController: UIViewController {
         view.addSubview(scrollView)
         
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 8),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
