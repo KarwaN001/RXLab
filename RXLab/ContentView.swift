@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import UIKit
+
+struct MainViewHost: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> MainViewController {
+        MainViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
+        
+    }
+}
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        MainViewHost()
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
