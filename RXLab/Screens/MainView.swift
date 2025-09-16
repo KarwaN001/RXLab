@@ -27,10 +27,20 @@ class MainViewController: UIViewController {
     
     // RxSwift concepts
     private let concepts = [
-        "Observable", "Observer", "Disposable", "Subjects",
-        "Relays (RxCocoa)", "Special Observable Types", "Transformation Operators",
-        "Filtering Operators", "Combining Operators", "Error Handling",
-        "Schedulers", "DelegateProxy (RxCocoa)", "Binder (RxCocoa)", "RxTest"
+        "Observable",
+        "Observer",
+        "Disposable",
+        "Subjects",
+        "Relays (RxCocoa)",
+        "Special Observable Types",
+        "Transformation Operators",
+        "Filtering Operators",
+        "Combining Operators",
+        "Error Handling",
+        "Schedulers",
+        "DelegateProxy (RxCocoa)",
+        "Binder (RxCocoa)",
+        "RxTest"
     ]
 
     override func viewDidLoad() {
