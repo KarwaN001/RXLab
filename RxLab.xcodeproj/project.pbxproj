@@ -13,6 +13,11 @@
 		9C8D54CB2E79E49400221AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D54C92E79E49400221AB3 /* Main.storyboard */; };
 		9C8D54CD2E79E49500221AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D54CC2E79E49500221AB3 /* Assets.xcassets */; };
 		9C8D54D02E79E49500221AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D54CE2E79E49500221AB3 /* LaunchScreen.storyboard */; };
+		9C8D54DA2E79EA0100221AB3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8D54D92E79EA0100221AB3 /* RxBlocking */; };
+		9C8D54DC2E79EA0100221AB3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8D54DB2E79EA0100221AB3 /* RxCocoa */; };
+		9C8D54DE2E79EA0100221AB3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8D54DD2E79EA0100221AB3 /* RxRelay */; };
+		9C8D54E02E79EA0100221AB3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8D54DF2E79EA0100221AB3 /* RxSwift */; };
+		9C8D54E22E79EA0100221AB3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8D54E12E79EA0100221AB3 /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8D54E22E79EA0100221AB3 /* RxTest in Frameworks */,
+				9C8D54DE2E79EA0100221AB3 /* RxRelay in Frameworks */,
+				9C8D54DC2E79EA0100221AB3 /* RxCocoa in Frameworks */,
+				9C8D54E02E79EA0100221AB3 /* RxSwift in Frameworks */,
+				9C8D54DA2E79EA0100221AB3 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,13 @@
 			dependencies = (
 			);
 			name = RxLab;
+			packageProductDependencies = (
+				9C8D54D92E79EA0100221AB3 /* RxBlocking */,
+				9C8D54DB2E79EA0100221AB3 /* RxCocoa */,
+				9C8D54DD2E79EA0100221AB3 /* RxRelay */,
+				9C8D54DF2E79EA0100221AB3 /* RxSwift */,
+				9C8D54E12E79EA0100221AB3 /* RxTest */,
+			);
 			productName = RxLab;
 			productReference = 9C8D54C02E79E49400221AB3 /* RxLab.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 9C8D54B72E79E49300221AB3;
+			packageReferences = (
+				9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 9C8D54C12E79E49400221AB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +378,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C8D54D92E79EA0100221AB3 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		9C8D54DB2E79EA0100221AB3 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		9C8D54DD2E79EA0100221AB3 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		9C8D54DF2E79EA0100221AB3 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		9C8D54E12E79EA0100221AB3 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8D54D82E79EA0100221AB3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C8D54B82E79E49300221AB3 /* Project object */;
 }
