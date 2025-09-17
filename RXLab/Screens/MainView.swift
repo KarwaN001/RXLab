@@ -122,11 +122,16 @@ class MainViewController: UIViewController {
                 nav.modalPresentationStyle = .fullScreen
                 present(nav, animated: true)
             }
+        case "Observer":
+            let ObserverVC = ObserverVC()
+            if let nav = navigationController {
+                nav.pushViewController(ObserverVC, animated: true)
+            } else {
+                let nav = UINavigationController(rootViewController: ObserverVC)
+                nav.modalPresentationStyle = .fullScreen
+                present(nav, animated: true)
+            }
             
-        // Future cases for other concepts
-        // case "Observer": ...
-        // case "Disposable": ...
-        
         default:
             break
         }
